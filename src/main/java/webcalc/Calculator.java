@@ -49,12 +49,12 @@ public class Calculator {
 	@Consumes(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	public String calculate(String inputJson) {
-		expression = gson.fromJson(inputJson, Expression.class);		
+		expression = gson.fromJson(inputJson, Expression.class);
 		result = new Result();
-		
+
 		try {
 			shell.eval("double result = " + expression.getExpression());
-			
+
 			result.setResult(((Double) shell.get("result")).toString());
 			result.setError(false);
 		} catch (Exception e) {
