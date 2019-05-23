@@ -1,4 +1,4 @@
-#Webcalc
+# Webcalc
 
 A Jersey RESTful Java EE web service running on a WildFly server within an OpenShift container.
 
