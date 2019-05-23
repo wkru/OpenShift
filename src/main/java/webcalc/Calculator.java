@@ -41,7 +41,7 @@ public class Calculator {
 
 	@GET
 	@Produces(javax.ws.rs.core.MediaType.TEXT_HTML)
-	public String GETHTMLFallback() {
+	public String fallbackHTML() {
 		return "<html><head><title>Webcalc</title></head><body><h1>Webcalc</h1>Use the POST HTTP method to calculate expressions.</body></html>";
 	}
 
